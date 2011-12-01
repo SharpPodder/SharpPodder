@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A2F4E44D-80FC-4895-A406-77A998CF7D42}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpPodder.CustomServiceModelSyndication</RootNamespace>
+    <AssemblyName>SharpPodder.CustomServiceModelSyndication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="System.Runtime.Serialization.Json\DataContractJsonSerializer.cs" />
+    <Compile Include="System.Runtime.Serialization.Json\DataContractJsonSerializer_2_1.cs" />
+    <Compile Include="System.Runtime.Serialization.Json\IXmlJsonReaderInitializer.cs" />
+    <Compile Include="System.Runtime.Serialization.Json\IXmlJsonWriterInitializer.cs" />
+    <Compile Include="System.Runtime.Serialization.Json\JsonReader.cs" />
+    <Compile Include="System.Runtime.Serialization.Json\JsonReaderWriterFactory.cs" />
+    <Compile Include="System.Runtime.Serialization.Json\JsonSerializationReader.cs" />
+    <Compile Include="System.Runtime.Serialization.Json\JsonSerializationWriter.cs" />
+    <Compile Include="System.Runtime.Serialization.Json\JsonWriter.cs" />
+    <Compile Include="System.Runtime.Serialization.Json\TypeMap.cs" />
+    <Compile Include="System.ServiceModel.Channels\WebBodyFormatMessageProperty.cs" />
+    <Compile Include="System.ServiceModel.Channels\WebContentFormat.cs" />
+    <Compile Include="System.ServiceModel.Channels\WebContentTypeMapper.cs" />
+    <Compile Include="System.ServiceModel.Channels\WebMessageEncoder.cs" />
+    <Compile Include="System.ServiceModel.Channels\WebMessageEncoderFactory.cs" />
+    <Compile Include="System.ServiceModel.Channels\WebMessageEncodingBindingElement.cs" />
+    <Compile Include="System.ServiceModel.Syndication\Atom10FeedFormatter.cs" />
+    <Compile Include="System.ServiceModel.Syndication\Atom10FeedFormatter_1.cs" />
+    <Compile Include="System.ServiceModel.Syndication\Atom10ItemFormatter.cs" />
+    <Compile Include="System.ServiceModel.Syndication\Atom10ItemFormatter_1.cs" />
+    <Compile Include="System.ServiceModel.Syndication\AtomPub10CategoriesDocumentFormatter.cs" />
+    <Compile Include="System.ServiceModel.Syndication\AtomPub10ServiceDocumentFormatter.cs" />
+    <Compile Include="System.ServiceModel.Syndication\AtomPub10ServiceDocumentFormatter_1.cs" />
+    <Compile Include="System.ServiceModel.Syndication\CategoriesDocument.cs" />
+    <Compile Include="System.ServiceModel.Syndication\CategoriesDocumentFormatter.cs" />
+    <Compile Include="System.ServiceModel.Syndication\InlineCategoriesDocument.cs" />
+    <Compile Include="System.ServiceModel.Syndication\ISyndicationElement.cs" />
+    <Compile Include="System.ServiceModel.Syndication\ReferencedCategoriesDocument.cs" />
+    <Compile Include="System.ServiceModel.Syndication\ResourceCollectionInfo.cs" />
+    <Compile Include="System.ServiceModel.Syndication\Rss20FeedFormatter.cs" />
+    <Compile Include="System.ServiceModel.Syndication\Rss20FeedFormatter_1.cs" />
+    <Compile Include="System.ServiceModel.Syndication\Rss20ItemFormatter.cs" />
+    <Compile Include="System.ServiceModel.Syndication\Rss20ItemFormatter_1.cs" />
+    <Compile Include="System.ServiceModel.Syndication\ServiceDocument.cs" />
+    <Compile Include="System.ServiceModel.Syndication\ServiceDocumentFormatter.cs" />
+    <Compile Include="System.ServiceModel.Syndication\SyndicationCategory.cs" />
+    <Compile Include="System.ServiceModel.Syndication\SyndicationContent.cs" />
+    <Compile Include="System.ServiceModel.Syndication\SyndicationElementExtension.cs" />
+    <Compile Include="System.ServiceModel.Syndication\SyndicationElementExtensionCollection.cs" />
+    <Compile Include="System.ServiceModel.Syndication\SyndicationExtensions.cs" />
+    <Compile Include="System.ServiceModel.Syndication\SyndicationFeed.cs" />
+    <Compile Include="System.ServiceModel.Syndication\SyndicationFeedFormatter.cs" />
+    <Compile Include="System.ServiceModel.Syndication\SyndicationItem.cs" />
+    <Compile Include="System.ServiceModel.Syndication\SyndicationItemFormatter.cs" />
+    <Compile Include="System.ServiceModel.Syndication\SyndicationLink.cs" />
+    <Compile Include="System.ServiceModel.Syndication\SyndicationPerson.cs" />
+    <Compile Include="System.ServiceModel.Syndication\SyndicationVersions.cs" />
+    <Compile Include="System.ServiceModel.Syndication\TextSyndicationContent.cs" />
+    <Compile Include="System.ServiceModel.Syndication\TextSyndicationContentKind.cs" />
+    <Compile Include="System.ServiceModel.Syndication\UrlSyndicationContent.cs" />
+    <Compile Include="System.ServiceModel.Syndication\Workspace.cs" />
+    <Compile Include="System.ServiceModel.Syndication\XmlSyndicationContent.cs" />
+    <Compile Include="FeedReading\CustomServiceModelSyndicationFeedReader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\SharpPodder.FeedReading\SharpPodder.FeedReading.csproj">
+      <Project>{EB0B6276-043D-416D-9301-0CCFF14DEBC8}</Project>
+      <Name>SharpPodder.FeedReading</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

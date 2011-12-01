@@ -1,0 +1,8 @@
+﻿{
+  FeedReader: {
+    $type: "SharpPodder.FeedReading.CustomServiceModelSyndicationFeedReader, SharpPodder.CustomServiceModelSyndication"
+  },
+  Name: "La Vengaza Sera Terrible",
+  Uri: "http://feeds.feedburner.com/VenganzasDelPasado",
+  FileNameFormat: "{MyDocumentsFolder}/SharpPodder/{feedName}/{fileName}{timeNow:yyyyMMddhhmmss}.{fileExtension}"
+}
