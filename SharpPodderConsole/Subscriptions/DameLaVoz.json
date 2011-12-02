@@ -1,6 +1,6 @@
 ﻿{
   FeedReader: {
-    $type: "SharpPodder.FeedReading.CustomServiceModelSyndicationFeedReader, SharpPodder.CustomServiceModelSyndication"
+    $type: "SharpPodder.FeedReading.ServiceModelSyndicationFeedReader, SharpPodder.ServiceModelSyndication"
   },
   Name: "Dame la Voz",
   Uri: "http://feeds2.feedburner.com/DameLaVoz",

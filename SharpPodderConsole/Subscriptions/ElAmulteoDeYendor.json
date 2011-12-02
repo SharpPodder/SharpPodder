@@ -1,6 +1,6 @@
 ﻿{
   FeedReader: {
-    $type: "SharpPodder.FeedReading.CustomServiceModelSyndicationFeedReader, SharpPodder.CustomServiceModelSyndication"
+    $type: "SharpPodder.FeedReading.ServiceModelSyndicationFeedReader, SharpPodder.ServiceModelSyndication"
   },
   Name: "El amuleto de Yendor",
   Uri: "http://feeds.feedburner.com/ElAmuletoDeYendor",
