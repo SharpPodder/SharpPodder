@@ -352,7 +352,7 @@ namespace System.ServiceModel.Syndication
 			}
 
 			if (!reader.IsEmptyElement) {
-				string url = null;
+				string url = string.Empty;
 				reader.Read ();
 				for (reader.MoveToContent (); reader.NodeType != XmlNodeType.EndElement; reader.MoveToContent ()) {
 					if (reader.IsTextNode ())

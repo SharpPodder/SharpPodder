@@ -15,8 +15,8 @@ namespace SharpPodder
     [JsonObject(MemberSerialization.OptIn)]
     public class SubscriptionState
     {
-        [JsonProperty]
-        public DateTimeOffset? ItemsRefreshedAt { get; private set; }
+        //[JsonProperty] it is not working on mono
+        public DateTimeOffset ItemsRefreshedAt { get; private set; }
 
         private List<SubscriptionItem> items = new List<SubscriptionItem>();
         

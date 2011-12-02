@@ -1,6 +1,6 @@
 ﻿{
   FeedReader: {
-    $type: "SharpPodder.FeedReading.ServiceModelSyndicationFeedReader, SharpPodder.ServiceModelSyndication"
+    $type: "SharpPodder.FeedReading.CustomServiceModelSyndicationFeedReader, SharpPodder.CustomServiceModelSyndication"
   },
   Name: "Amnesty International Semanal Español",
   Uri: "http://www.es.amnesty.org/noticias/podcast/podcast.xml",
