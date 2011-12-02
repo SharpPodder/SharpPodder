@@ -20,7 +20,12 @@ namespace SharpPodder
             NullValueHandling = NullValueHandling.Ignore,
             TypeNameHandling = TypeNameHandling.Auto,
             ObjectCreationHandling = ObjectCreationHandling.Replace,
-            DefaultValueHandling = DefaultValueHandling.Include
+            DefaultValueHandling = DefaultValueHandling.Include,
+			Error = (object sender, Newtonsoft.Json.Serialization.ErrorEventArgs e) =>
+			{
+				//In order to ignore all errors
+				e.ErrorContext.Handled = true;
+			}
         };
 
         public bool AutoSave { get; set; }
@@ -37,7 +42,7 @@ namespace SharpPodder
             //TODO: block here
             var folder = Path.GetDirectoryName(RealFileName);
             if (!Directory.Exists(folder))
-                Directory.CreateDirectory(folder);
+               Directory.CreateDirectory(folder);
             JsonSerializer jsonSerializer = JsonSerializer.Create(SerializerSettings);
             using (var sw = new StreamWriter(RealFileName))
             using (var jsonWriter = new JsonTextWriter(sw))
