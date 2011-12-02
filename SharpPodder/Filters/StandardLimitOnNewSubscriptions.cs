@@ -18,15 +18,15 @@ namespace SharpPodder
 
         public StandardLimitOnNewSubscriptions()
         {
-            MaxInitialDownloads = 5;
-            MaxOldInitialDownloads = TimeSpan.FromDays(366);
+            MaxInitialDownloads = 3;
+            MaxOldInitialDownloads = TimeSpan.FromDays(750);
         }
 
         public void Filter(MergeResult mergeResult)
         {
-            var newestToOlder = mergeResult.Reverse().ToArray();
             if (mergeResult.ThereWereNoItems)
             {
+				var newestToOlder = mergeResult.Reverse().ToArray();
                 var ignore = false;
                 var count = 0;
                 foreach (var item in newestToOlder)
