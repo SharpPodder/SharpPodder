@@ -1,8 +1,0 @@
-﻿{
-  FeedReader: {
-    $type: "SharpPodder.FeedReading.CustomServiceModelSyndicationFeedReader, SharpPodder.CustomServiceModelSyndication"
-  },
-  Name: "Democracy Now Semanal Español",
-  Uri: "http://audio.urcm.net/spip.php?page=backend&id_rubrique=64",
-  FileNameFormat: "{MyDocumentsFolder}/SharpPodder/{feedName}/{fileName}{timeNow:yyyyMMddhhmmss}.{fileExtension}"
-}
