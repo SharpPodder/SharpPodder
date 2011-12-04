@@ -25,5 +25,12 @@ namespace SharpPodder.Utilities
         {
             return getKey(item);
         }
+		
+		public TItem Take(TKey key)
+		{
+			var value = this[key];
+			this.Remove(key);
+			return value;
+		}
     }
 }

@@ -33,16 +33,13 @@ namespace SharpPodder.FeedMerging
 
         private void ChooseNewItem(string id, KeyedCollection<string, FeedItem> currentAuxList, MergeResult result)
         {
-            result.AddItem(new SubscriptionItem(currentAuxList[id]), ItemMergeStatus.NewItem);
-            currentAuxList.Remove(id);
+            result.AddItem(new SubscriptionItem(currentAuxList.Take(id)), ItemMergeStatus.NewItem);
         }
 
         private void ChooseMergeItem(string id, KeyedCollection<string, SubscriptionItem> previousAuxList, KeyedCollection<string, FeedItem> currentAuxList, MergeResult result)
         {
-            var previous = previousAuxList[id];
-            var current = currentAuxList[id];
-            previousAuxList.Remove(id);
-            currentAuxList.Remove(id);
+            var previous = previousAuxList.Take(id);
+			var current = currentAuxList.Take(id);
             if (previous.LastUpdatedTime == current.LastUpdatedTime)
             {
                 result.AddItem(previous, ItemMergeStatus.NoChangedItem);
@@ -56,8 +53,7 @@ namespace SharpPodder.FeedMerging
 
         private void ChooseRemovedItem(string id, KeyedCollection<string, SubscriptionItem> previousAuxList, MergeResult result)
         {
-            result.AddItem(previousAuxList[id], ItemMergeStatus.RemovedItem);
-            previousAuxList.Remove(id);
+            result.AddItem(previousAuxList.Take(id), ItemMergeStatus.RemovedItem);
         }
     }
 }
