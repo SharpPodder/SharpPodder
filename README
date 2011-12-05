@@ -1,8 +1,11 @@
-=== SharpPodder ===
+SharpPodder
+===========
 
 Podcast downloader and API
 
-== TODO ==
+TODO
+----
+
 * Links have a Download method. To do that we need a reference to the subscription and it is dirty and ugly to recreate references after materialization (and there are other uglier details related).
 * MyIsoDateTimeConverter is a quick copy/paste from the first result on Google to fix an issue deserializing json ISO dates with Mono. It should be checked and clean.
 * Global configuration file.
