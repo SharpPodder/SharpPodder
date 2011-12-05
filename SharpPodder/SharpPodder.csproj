@@ -61,6 +61,7 @@
     <Compile Include="Subscription.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\KeyedCollection.cs" />
+    <Compile Include="JsonConverters\MyIsoDateTimeConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -79,4 +80,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Folder Include="JsonConverters\" />
+  </ItemGroup>
 </Project>

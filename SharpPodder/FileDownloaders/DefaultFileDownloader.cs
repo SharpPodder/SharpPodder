@@ -13,7 +13,6 @@ namespace SharpPodder.FileDownloaders
         {
             var localPath = localUri.LocalPath;
             var tmp = Path.GetTempFileName();
-            var originalfilename = remoteUri.Segments.LastOrDefault();
             var wc = new WebClient();
             wc.DownloadFile(remoteUri, tmp);
             var localFolder = Path.GetDirectoryName(localPath);
