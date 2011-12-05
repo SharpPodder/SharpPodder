@@ -1,0 +1,8 @@
+﻿{
+  FeedReader: {
+    $type: "SharpPodder.FeedReading.ServiceModelSyndicationFeedReader, SharpPodder.ServiceModelSyndication"
+  },
+  Name: "Herding Code",
+  Uri: "http://feeds.feedburner.com/herdingcode",
+  FileNameFormat: "{MyDocumentsFolder}/SharpPodder/{feedName}/{fileName}{timeNow:yyyyMMddhhmmss}.{fileExtension}"
+}

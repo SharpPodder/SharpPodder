@@ -1,0 +1,8 @@
+﻿{
+  FeedReader: {
+    $type: "SharpPodder.FeedReading.ServiceModelSyndicationFeedReader, SharpPodder.ServiceModelSyndication"
+  },
+  Name: "This Developer's Life",
+  Uri: "http://feeds.feedburner.com/thisdeveloperslife",
+  FileNameFormat: "{MyDocumentsFolder}/SharpPodder/{feedName}/{fileName}{timeNow:yyyyMMddhhmmss}.{fileExtension}"
+}

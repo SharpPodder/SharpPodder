@@ -1,0 +1,8 @@
+﻿{
+  FeedReader: {
+    $type: "SharpPodder.FeedReading.ServiceModelSyndicationFeedReader, SharpPodder.ServiceModelSyndication"
+  },
+  Name: "Distributed Podcast",
+  Uri: "http://feeds.feedburner.com/DistributedPodcast",
+  FileNameFormat: "{MyDocumentsFolder}/SharpPodder/{feedName}/{fileName}{timeNow:yyyyMMddhhmmss}.{fileExtension}"
+}
