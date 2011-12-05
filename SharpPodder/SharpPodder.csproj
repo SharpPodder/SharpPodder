@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C9ED3901-3305-4D6A-86AD-32F24B09F01A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpPodder</RootNamespace>
+    <AssemblyName>SharpPodder</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Newtonsoft.Json, Version=4.0.3.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>..\packages\Newtonsoft.Json.4.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FeedMerging\AddNewItemsLastFeedMerger.cs" />
+    <Compile Include="FeedMerging\ItemMergeStatus.cs" />
+    <Compile Include="FeedMerging\MergeResult.cs" />
+    <Compile Include="Filters\StandardLimitOnNewSubscriptions.cs" />
+    <Compile Include="SubscriptionState.cs" />
+    <Compile Include="FeedMerging\OverrideAllFeedMerger.cs" />
+    <Compile Include="FeedMerging\IFeedMerger.cs" />
+    <Compile Include="Filters\StandardPodcastFilter.cs" />
+    <Compile Include="Filters\RelationshipAndMediaTypeFilter.cs" />
+    <Compile Include="ISubscriptionFilter.cs" />
+    <Compile Include="SubscriptionItemLink.cs" />
+    <Compile Include="FileDownloaders\DefaultFileDownloader.cs" />
+    <Compile Include="SubscriptionItem.cs" />
+    <Compile Include="IFileDownloader.cs" />
+    <Compile Include="SerializableSuscription.cs" />
+    <Compile Include="Subscription.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\KeyedCollection.cs" />
+    <Compile Include="JsonConverters\MyIsoDateTimeConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharpPodder.FeedReading\SharpPodder.FeedReading.csproj">
+      <Project>{EB0B6276-043D-416D-9301-0CCFF14DEBC8}</Project>
+      <Name>SharpPodder.FeedReading</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Folder Include="JsonConverters\" />
+  </ItemGroup>
+</Project>
